@@ -358,7 +358,7 @@
             self.$elems.removeData('offset');
 
             self.$elems.each(function(i) {
-                this.style.cssText = blocks[i].style;
+                this.style.cssText = blocks[i].style || blocks[i].originalCSS.style;
             });
         }
 
